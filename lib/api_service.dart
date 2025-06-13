@@ -4,7 +4,7 @@ import 'riot_champion.dart';
 
 class RiotApiService {
   // API KEY'İNİ BURAYA EKLE
-  static const String apiKey = 'RGAPI-bd53bd73-1704-42cb-a877-dd42a127f3d2';
+  static const String apiKey = 'YOUR-API-HERE';
 
   static const String baseUrl = 'https://ddragon.leagueoflegends.com/cdn';
   static const String championUrl =
