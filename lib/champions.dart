@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'champion_detail_pages.dart';
+import 'favorites_manager.dart';
+import 'favorites_page.dart';
 
 class Champion {
   final String name;
@@ -27,6 +29,18 @@ class Champion {
 
   String get splashUrl {
     return 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championId}_0.jpg';
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'name': name,
+      'role': role,
+      'difficulty': difficulty,
+      'winRate': winRate,
+      'pickRate': pickRate,
+      'banRate': banRate,
+      'championId': championId,
+    };
   }
 }
 
@@ -561,6 +575,65 @@ class _ChampionListScreenState extends State<ChampionListScreen>
           centerTitle: false,
           toolbarHeight: 64,
           actions: [
+            // Favorites Button with Badge
+            AnimatedBuilder(
+              animation: FavoritesManager(),
+              builder: (context, child) {
+                final favoriteCount = FavoritesManager().favoriteCount;
+                return Stack(
+                  children: [
+                    IconButton(
+                      icon: Icon(
+                        Icons.favorite_rounded,
+                        color: favoriteCount > 0
+                            ? Colors.red.shade400
+                            : textColor.withOpacity(0.7),
+                        size: 24,
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FavoritesPage(
+                              isDarkTheme: isDarkTheme,
+                            ),
+                          ),
+                        );
+                      },
+                      tooltip: 'Favorilerim',
+                    ),
+                    if (favoriteCount > 0)
+                      Positioned(
+                        right: 8,
+                        top: 8,
+                        child: Container(
+                          padding: const EdgeInsets.all(4),
+                          decoration: const BoxDecoration(
+                            color: Color(0xFFC89B3C),
+                            shape: BoxShape.circle,
+                          ),
+                          constraints: const BoxConstraints(
+                            minWidth: 16,
+                            minHeight: 16,
+                          ),
+                          child: Text(
+                            favoriteCount > 99
+                                ? '99+'
+                                : favoriteCount.toString(),
+                            style: const TextStyle(
+                              color: Color(0xFF0A1428),
+                              fontSize: 10,
+                              fontWeight: FontWeight.w700,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                  ],
+                );
+              },
+            ),
+
             // Theme Toggle
             AnimatedContainer(
               duration: const Duration(milliseconds: 300),
@@ -804,44 +877,80 @@ class _ChampionListScreenState extends State<ChampionListScreen>
                             topLeft: Radius.circular(20),
                             bottomLeft: Radius.circular(20),
                           ),
-                          child: Hero(
-                            tag: 'champion-${champion.championId}',
-                            child: CachedNetworkImage(
-                              imageUrl: champion.imageUrl,
-                              fit: BoxFit.cover,
-                              placeholder: (context, url) => Container(
-                                decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: [
-                                      Color(0xFFC89B3C),
-                                      Color(0xFFD4AF37)
-                                    ],
+                          child: Stack(
+                            children: [
+                              Hero(
+                                tag: 'champion-${champion.championId}',
+                                child: CachedNetworkImage(
+                                  imageUrl: champion.imageUrl,
+                                  fit: BoxFit.cover,
+                                  width: double.infinity,
+                                  height: double.infinity,
+                                  placeholder: (context, url) => Container(
+                                    decoration: const BoxDecoration(
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          Color(0xFFC89B3C),
+                                          Color(0xFFD4AF37)
+                                        ],
+                                      ),
+                                    ),
+                                    child: const Center(
+                                      child: CircularProgressIndicator(
+                                        valueColor:
+                                            AlwaysStoppedAnimation<Color>(
+                                                Color(0xFF0A1428)),
+                                        strokeWidth: 2,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                                child: const Center(
-                                  child: CircularProgressIndicator(
-                                    valueColor: AlwaysStoppedAnimation<Color>(
-                                        Color(0xFF0A1428)),
-                                    strokeWidth: 2,
+                                  errorWidget: (context, url, error) =>
+                                      Container(
+                                    decoration: const BoxDecoration(
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          Color(0xFFC89B3C),
+                                          Color(0xFFD4AF37)
+                                        ],
+                                      ),
+                                    ),
+                                    child: const Icon(
+                                      Icons.person_rounded,
+                                      color: Color(0xFF0A1428),
+                                      size: 48,
+                                    ),
                                   ),
                                 ),
                               ),
-                              errorWidget: (context, url, error) => Container(
-                                decoration: const BoxDecoration(
-                                  gradient: LinearGradient(
-                                    colors: [
-                                      Color(0xFFC89B3C),
-                                      Color(0xFFD4AF37)
-                                    ],
-                                  ),
-                                ),
-                                child: const Icon(
-                                  Icons.person_rounded,
-                                  color: Color(0xFF0A1428),
-                                  size: 48,
-                                ),
+
+                              // Favorite indicator
+                              AnimatedBuilder(
+                                animation: FavoritesManager(),
+                                builder: (context, child) {
+                                  final isFavorite = FavoritesManager()
+                                      .isFavorite(champion.championId);
+                                  if (!isFavorite)
+                                    return const SizedBox.shrink();
+
+                                  return Positioned(
+                                    top: 8,
+                                    right: 8,
+                                    child: Container(
+                                      padding: const EdgeInsets.all(6),
+                                      decoration: const BoxDecoration(
+                                        color: Color(0xFFC89B3C),
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: const Icon(
+                                        Icons.favorite_rounded,
+                                        color: Color(0xFF0A1428),
+                                        size: 16,
+                                      ),
+                                    ),
+                                  );
+                                },
                               ),
-                            ),
+                            ],
                           ),
                         ),
                       ),
@@ -1194,44 +1303,68 @@ class _ChampionListScreenState extends State<ChampionListScreen>
 
                     const Spacer(),
 
-                    // Favorite Button
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.pop(context);
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content:
-                                  Text('${champion.name} favorilere eklendi!'),
-                              backgroundColor: const Color(0xFFC89B3C),
-                              behavior: SnackBarBehavior.floating,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(12),
+                    // Favorite Button - Updated
+                    AnimatedBuilder(
+                      animation: FavoritesManager(),
+                      builder: (context, child) {
+                        final isFavorite =
+                            FavoritesManager().isFavorite(champion.championId);
+                        return SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton.icon(
+                            onPressed: () {
+                              FavoritesManager()
+                                  .toggleFavorite(champion.toMap());
+                              Navigator.pop(context);
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text(isFavorite
+                                      ? '${champion.name} favorilerden çıkarıldı!'
+                                      : '${champion.name} favorilere eklendi!'),
+                                  backgroundColor: isFavorite
+                                      ? Colors.red.shade400
+                                      : const Color(0xFFC89B3C),
+                                  behavior: SnackBarBehavior.floating,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                ),
+                              );
+                            },
+                            icon: Icon(
+                              isFavorite
+                                  ? Icons.favorite_rounded
+                                  : Icons.favorite_border_rounded,
+                              size: 20,
+                            ),
+                            label: Text(
+                              isFavorite
+                                  ? 'Favorilerden Çıkar'
+                                  : 'Favorilere Ekle',
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
-                          );
-                        },
-                        icon:
-                            const Icon(Icons.favorite_border_rounded, size: 20),
-                        label: const Text(
-                          'Favorilere Ekle',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: isFavorite
+                                  ? Colors.red.shade400
+                                  : const Color(0xFFC89B3C),
+                              foregroundColor: isFavorite
+                                  ? Colors.white
+                                  : const Color(0xFF0A1428),
+                              padding: const EdgeInsets.symmetric(vertical: 18),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              elevation: 4,
+                              shadowColor: isFavorite
+                                  ? Colors.red.shade400.withOpacity(0.3)
+                                  : const Color(0xFFC89B3C).withOpacity(0.3),
+                            ),
                           ),
-                        ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFC89B3C),
-                          foregroundColor: const Color(0xFF0A1428),
-                          padding: const EdgeInsets.symmetric(vertical: 18),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
-                          ),
-                          elevation: 4,
-                          shadowColor: const Color(0xFFC89B3C).withOpacity(0.3),
-                        ),
-                      ),
+                        );
+                      },
                     ),
                   ],
                 ),

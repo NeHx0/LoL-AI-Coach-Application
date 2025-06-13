@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'champions.dart';
+import 'favorites_manager.dart';
+import 'favorites_page.dart';
 
 void main() {
   runApp(const LeagueChampionsApp());
@@ -599,25 +601,107 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Header
-                const SizedBox(height: 20),
-                const Text(
-                  'League of\nLegends',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 36,
-                    fontWeight: FontWeight.w900,
-                    height: 1.1,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Champion Rehberi',
-                  style: TextStyle(
-                    color: Color(0xFFC89B3C),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                  ),
+                // Header with Favorites Button
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // Title Section
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(height: 20),
+                          Text(
+                            'League of\nLegends',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 36,
+                              fontWeight: FontWeight.w900,
+                              height: 1.1,
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          Text(
+                            'Champion Rehberi',
+                            style: TextStyle(
+                              color: Color(0xFFC89B3C),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    // Favorites Button
+                    AnimatedBuilder(
+                      animation: FavoritesManager(),
+                      builder: (context, child) {
+                        final favoriteCount = FavoritesManager().favoriteCount;
+                        return Container(
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF1E2328),
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                              color: Colors.white.withOpacity(0.1),
+                            ),
+                          ),
+                          child: Stack(
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const FavoritesPage(
+                                        isDarkTheme: true,
+                                      ),
+                                    ),
+                                  );
+                                },
+                                icon: Icon(
+                                  Icons.favorite_rounded,
+                                  color: favoriteCount > 0
+                                      ? Colors.red.shade400
+                                      : Colors.white.withOpacity(0.7),
+                                  size: 28,
+                                ),
+                                tooltip: 'Favorilerim',
+                                padding: const EdgeInsets.all(12),
+                              ),
+                              if (favoriteCount > 0)
+                                Positioned(
+                                  right: 8,
+                                  top: 8,
+                                  child: Container(
+                                    padding: const EdgeInsets.all(4),
+                                    decoration: const BoxDecoration(
+                                      color: Color(0xFFC89B3C),
+                                      shape: BoxShape.circle,
+                                    ),
+                                    constraints: const BoxConstraints(
+                                      minWidth: 20,
+                                      minHeight: 20,
+                                    ),
+                                    child: Text(
+                                      favoriteCount > 99
+                                          ? '99+'
+                                          : favoriteCount.toString(),
+                                      style: const TextStyle(
+                                        color: Color(0xFF0A1428),
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ],
                 ),
 
                 const SizedBox(height: 40),
@@ -748,11 +832,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          _buildStatItem('50+', 'Champions'),
+                          _buildStatItem('67', 'Champions'),
                           _buildStatDivider(),
                           _buildStatItem('5', 'Roles'),
                           _buildStatDivider(),
-                          _buildStatItem('∞', 'Stratejiler'),
+                          AnimatedBuilder(
+                            animation: FavoritesManager(),
+                            builder: (context, child) {
+                              final favoriteCount =
+                                  FavoritesManager().favoriteCount;
+                              return _buildStatItem(
+                                  favoriteCount.toString(), 'Favoriler');
+                            },
+                          ),
                         ],
                       ),
                     ],
