@@ -1,3 +1,14 @@
+  // ======================= ⚠️ WARNING =======================
+  // This API key is intentionally left empty for security reasons.
+  // The actual key is stored securely in an encrypted local file
+  // (e.g., lib/api_key.dart) and excluded from GitHub via .gitignore.
+  //
+  // DO NOT COMMIT YOUR REAL API KEY TO VERSION CONTROL.
+  // You may use AES encryption or flutter_dotenv for secure storage.
+  // ==========================================================
+
+
+
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'riot_champion.dart';
