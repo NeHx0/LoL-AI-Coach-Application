@@ -1,4 +1,4 @@
-# 🏆 League of Legends AI Coach Uygulaması
+   # 🏆 League of Legends AI Coach Uygulaması
 
 <div align="center">
 
