@@ -1,4 +1,4 @@
-# 🏆 League of Legends AI Coach Application
+# 🏆 League of Legends AI Coach Uygulaması
 
 <div align="center">
 
@@ -6,82 +6,82 @@
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![League of Legends](https://img.shields.io/badge/League%20of%20Legends-C89B3C?style=for-the-badge&logo=riotgames&logoColor=white)
 
-**Modern AI-powered League of Legends coaching application**
+**Modern ve AI destekli League of Legends coach uygulaması**
 
-[📱 Download](#installation) • [🎮 Features](#features) • [📖 Usage](#usage-guide) • [🚀 Getting Started](#getting-started)
+[📱 İndir](#kurulum) • [🎮 Özellikler](#özellikler) • [📖 Kullanım](#kullanım-kılavuzu) • [🚀 Başlangıç](#başlangıç)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## 📋 İçindekiler
 
-- [🎯 About the Project](#-about-the-project)
-- [✨ Features](#-features)
-- [📱 Screenshots](#-screenshots)
-- [🚀 Getting Started](#-getting-started)
-- [📖 Usage Guide](#-usage-guide)
-- [🛠️ Installation](#️-installation)
-- [🎮 Champion Guide](#-champion-guide)
-- [⭐ Favorites System](#-favorites-system)
-- [🔧 Technical Details](#-technical-details)
-- [🤝 Contributing](#-contributing)
-
----
-
-## 🎯 About the Project
-
-**LoL AI Coach** is a modern mobile application developed for League of Legends players. Integrated with Riot Games API, it provides real-time champion statistics, professional build guides, and AI-powered champion recommendations.
-
-### 🎪 What It Does?
-
-- 🏅 **Personalized Champion Recommendations** - Champions suited to your playstyle
-- 📊 **Real-Time Statistics** - Win rate, pick rate, ban rate analytics
-- 🛠️ **Professional Build Guides** - Pro player build rotations
-- 🔮 **Optimized Rune Pages** - Meta-compliant rune sets
-- 📚 **Detailed Champion Guides** - Combos, counters, tips & tricks
-- ⭐ **Favorites System** - Save and manage your favorite champions
+- [🎯 Proje Hakkında](#-proje-hakkında)
+- [✨ Özellikler](#-özellikler)
+- [📱 Ekran Görüntüleri](#-ekran-görüntüleri)
+- [🚀 Başlangıç](#-başlangıç)
+- [📖 Kullanım Kılavuzu](#-kullanım-kılavuzu)
+- [🛠️ Kurulum](#️-kurulum)
+- [🎮 Champion Rehberi](#-champion-rehberi)
+- [⭐ Favoriler Sistemi](#-favoriler-sistemi)
+- [🔧 Teknik Detaylar](#-teknik-detaylar)
+- [🤝 Katkıda Bulunma](#-katkıda-bulunma)
 
 ---
 
-## ✨ Features
+## 🎯 Proje Hakkında
 
-### 🎮 **Champion Management**
-- **67 Champions** with detailed information
-- Role-based filtering *(Top, Jungle, Mid, ADC, Support)*
-- Search and discovery system
-- Difficulty level indicators *(Easy, Medium, Hard)*
+**LoL AI Coach**, League of Legends oyuncuları için geliştirilmiş modern bir mobil uygulamadır. Riot Games API'si ile entegre çalışarak, gerçek zamanlı champion istatistikleri, profesyonel build rehberleri ve AI destekli champion önerileri sunar.
 
-### 📊 **Statistical Analysis**
-- Current **Win Rate** data
-- **Pick Rate** and **Ban Rate** metrics
-- Champion popularity trends
-- Meta analysis and recommendations
+### 🎪 Ne Yapar?
 
-### 🛠️ **Build System**
-- **Core Items** - Main build rotation
-- **Boots Options** - Situation-specific footwear
-- **Situational Items** - Matchup-based items
-- **Starting Items** - Optimal opening builds
-- **Skill Order** - Ability leveling sequence
-
-### 🔮 **Rune System**
-- **Primary/Secondary Trees** - Optimal rune combinations
-- **Stat Shards** - Bonus statistics
-- **Strategy Descriptions** - Rune synergy explanations
-- **Meta-compliant** - Updated for current patch
-
-### 📚 **Champion Guides**
-- **Laning Phase** strategies
-- **Team Fighting** positioning
-- **Combos & Mechanics** - Skill combinations
-- **Tips & Tricks** - Pro player insights
-- **Counter Matchups** - Difficult opponents
-- **Team Synergies** - Best teammates
+- 🏅 **Kişiselleştirilmiş Champion Önerileri** - Oyun tarzınıza uygun championlar
+- 📊 **Gerçek Zamanlı İstatistikler** - Win rate, pick rate, ban rate analizi
+- 🛠️ **Profesyonel Build Rehberleri** - Pro player build rotasyonları
+- 🔮 **Optimize Rune Sayfaları** - Meta'ya uygun rune setleri
+- 📚 **Detaylı Champion Rehberleri** - Combo'lar, counter'lar, ipuçları
+- ⭐ **Favoriler Sistemi** - Sevdiğiniz championları kaydedin ve yönetin
 
 ---
 
-## 📱 Screenshots
+## ✨ Özellikler
+
+### 🎮 **Champion Yönetimi**
+- **67 Champion** için detaylı bilgiler
+- Role bazlı filtreleme *(Top, Jungle, Mid, ADC, Support)*
+- Arama ve keşif sistemi
+- Zorluk seviyesi gösterimi *(Easy, Medium, Hard)*
+
+### 📊 **İstatistik Analizi**
+- Güncel **Win Rate** verileri
+- **Pick Rate** ve **Ban Rate** metrikleri
+- Champion popülerlik trendleri
+- Meta analiz ve öneriler
+
+### 🛠️ **Build Sistemi**
+- **Core Items** - Ana build rotasyonu
+- **Boots Options** - Duruma özel ayakkabılar
+- **Situational Items** - Matchup'a göre eşyalar
+- **Starting Items** - Optimal başlangıç build'i
+- **Skill Order** - Yetenek geliştirme sırası
+
+### 🔮 **Rune Sistemi**
+- **Primary/Secondary Trees** - Optimal rune kombinasyonları
+- **Stat Shards** - Bonus istatistikler
+- **Strateji Açıklamaları** - Rune sinerjisi açıklamaları
+- **Meta Uyumlu** - Güncel patch için güncellendi
+
+### 📚 **Champion Rehberleri**
+- **Laning Phase** stratejileri
+- **Team Fighting** pozisyonlaması
+- **Combos & Mechanics** - Yetenek kombinasyonları
+- **Tips & Tricks** - Pro player ipuçları
+- **Counter Matchups** - Zor rakipler
+- **Team Synergies** - En iyi takım arkadaşları
+
+---
+
+## 📱 Ekran Görüntüleri
 
 ![image](https://github.com/user-attachments/assets/0ffdb0ed-79d5-4e50-8858-d8152535045f)
 ![image](https://github.com/user-attachments/assets/99946f22-ad16-4688-a816-a4f8b2c1e2ab)
@@ -92,224 +92,224 @@
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Başlangıç
 
-### 📋 Prerequisites
+### 📋 Gereksinimler
 
-Before running the application, make sure you have:
+Uygulamayı çalıştırmadan önce şunlara sahip olduğunuzdan emin olun:
 
-- **Flutter SDK** (3.0.0 or higher)
-- **Dart SDK** (2.17.0 or higher)
-- **Android Studio** or **VS Code** with Flutter extension
-- **Git** for version control
+- **Flutter SDK** (3.0.0 veya üzeri)
+- **Dart SDK** (2.17.0 veya üzeri)
+- **Android Studio** veya Flutter eklentili **VS Code**
+- **Git** versiyon kontrolü için
 
-### 🔑 API Setup
+### 🔑 API Kurulumu
 
-1. **Get Riot API Key:**
+1. **Riot API Key Alın:**
    ```bash
-   # Visit: https://developer.riotgames.com/
-   # Sign in with your Riot account
-   # Generate a new API key
+   # Şu adresi ziyaret edin: https://developer.riotgames.com/
+   # Riot hesabınızla giriş yapın
+   # Yeni bir API key oluşturun
    ```
 
-2. **Configure API Key:**
+2. **API Key'i Yapılandırın:**
    ```dart
-   // In lib/api_service.dart
-   static const String apiKey = 'YOUR_RIOT_API_KEY_HERE';
+   // lib/api_service.dart dosyasında
+   static const String apiKey = 'RIOT_API_KEY_BURAYA';
    ```
 
 ---
 
-## 🛠️ Installation
+## 🛠️ Kurulum
 
-### 📱 **Method 1: Clone Repository**
+### 📱 **Yöntem 1: Repository'yi Klonlayın**
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/LoL-AI-Coach-Application.git
+# Repository'yi klonlayın
+git clone https://github.com/kullaniciadi/LoL-AI-Coach-Application.git
 
-# Navigate to project directory
+# Proje dizinine gidin
 cd LoL-AI-Coach-Application
 
-# Install dependencies
+# Bağımlılıkları yükleyin
 flutter pub get
 
-# Run the application
+# Uygulamayı çalıştırın
 flutter run
 ```
 
-### 📦 **Method 2: Download Release**
+### 📦 **Yöntem 2: Release İndirin**
 
-1. Go to [Releases](https://github.com/yourusername/LoL-AI-Coach-Application/releases)
-2. Download the latest APK file
-3. Install on your Android device
-4. Open and enjoy!
-
----
-
-## 📖 Usage Guide
-
-### 🏠 **Home Screen**
-- **Champion Recommendations** - Get personalized suggestions
-- **Lane Selection** - Choose your preferred role
-- **Random Pick** - Let AI suggest a champion for you
-- **Statistics Overview** - View app metrics
-
-### 🔍 **Champion Discovery**
-1. **Browse All Champions** - Explore the complete roster
-2. **Filter by Role** - Top, Jungle, Mid, ADC, Support
-3. **Search Function** - Find champions by name
-4. **Difficulty Filter** - Easy, Medium, Hard
-
-### 📊 **Champion Details**
-- **Statistics Card** - Win/Pick/Ban rates
-- **Build Guide** - Professional item builds
-- **Rune Pages** - Optimized rune setups
-- **Strategy Guide** - Detailed gameplay tips
-
-### ⭐ **Favorites Management**
-- **Add to Favorites** - Heart icon on champion cards
-- **Favorites Page** - Access via header button
-- **Quick Actions** - Build/Runes/Guide from favorites
-- **Remove Favorites** - One-tap management
+1. [Releases](https://github.com/kullaniciadi/LoL-AI-Coach-Application/releases) sayfasına gidin
+2. En son APK dosyasını indirin
+3. Android cihazınıza yükleyin
+4. Açın ve keyfini çıkarın!
 
 ---
 
-## 🎮 Champion Guide
+## 📖 Kullanım Kılavuzu
 
-### 🛠️ **Build System Usage**
+### 🏠 **Ana Ekran**
+- **Champion Önerileri** - Kişiselleştirilmiş öneriler alın
+- **Lane Seçimi** - Tercih ettiğiniz rolü seçin
+- **Rastgele Seçim** - AI'ın size champion önermesini sağlayın
+- **İstatistik Özeti** - Uygulama metriklerini görüntüleyin
 
-1. **Navigate to Champion** → Select any champion
-2. **Tap "Build" Button** → View professional builds
-3. **Core Items** → Essential items for the champion
-4. **Situational Items** → Adapt to enemy team composition
-5. **Skill Order** → Level abilities optimally
+### 🔍 **Champion Keşfi**
+1. **Tüm Championları Gözden Geçirin** - Komple roster'ı keşfedin
+2. **Role Göre Filtreleyin** - Top, Jungle, Mid, ADC, Support
+3. **Arama Fonksiyonu** - Championları isme göre bulun
+4. **Zorluk Filtresi** - Easy, Medium, Hard
 
-### 🔮 **Rune Pages**
+### 📊 **Champion Detayları**
+- **İstatistik Kartı** - Win/Pick/Ban oranları
+- **Build Rehberi** - Profesyonel eşya build'leri
+- **Rune Sayfaları** - Optimize edilmiş rune kurulumları
+- **Strateji Rehberi** - Detaylı oynanış ipuçları
 
-1. **Access Runes** → Champion detail → "Runes" button
-2. **Primary Tree** → Main rune selection
-3. **Secondary Tree** → Supporting runes
-4. **Stat Shards** → Bonus statistics
-5. **Copy Setup** → Use in-game
-
-### 📚 **Strategy Guides**
-
-1. **Champion Guide** → Detailed gameplay information
-2. **Laning Phase** → Early game strategies
-3. **Team Fighting** → Mid-late game positioning
-4. **Combos** → Skill rotation guides
-5. **Counters** → Difficult matchups and solutions
-
----
-
-## ⭐ Favorites System
-
-### 💫 **How to Use Favorites**
-
-1. **Adding Champions:**
-   - Tap the heart icon on any champion card
-   - Or use "Add to Favorites" in champion details
-
-2. **Managing Favorites:**
-   - Access via favorites button in header
-   - View all saved champions in one place
-   - Quick access to Build/Runes/Guide
-
-3. **Removing Favorites:**
-   - Tap heart icon to remove
-   - Or use "Clear All" option
-
-### 🎯 **Favorites Features**
-
-- **Real-time Badge** - Shows favorite count
-- **Quick Access** - Fast navigation to guides
-- **Persistent Storage** - Favorites saved across sessions
-- **Visual Indicators** - Golden heart on favorite champions
+### ⭐ **Favoriler Yönetimi**
+- **Favorilere Ekle** - Champion kartlarında kalp ikonu
+- **Favoriler Sayfası** - Header'daki buton ile erişim
+- **Hızlı Eylemler** - Favorilerden Build/Runes/Guide
+- **Favorileri Kaldır** - Tek dokunuşla yönetim
 
 ---
 
-## 🔧 Technical Details
+## 🎮 Champion Rehberi
 
-### 🏗️ **Architecture**
+### 🛠️ **Build Sistemi Kullanımı**
+
+1. **Champion'a Git** → Herhangi bir champion seçin
+2. **"Build" Butonuna Tıklayın** → Profesyonel build'leri görüntüleyin
+3. **Core Items** → Champion için temel eşyalar
+4. **Situational Items** → Düşman takım kompozisyonuna uyarlayın
+5. **Skill Order** → Yetenekleri optimal şekilde geliştirin
+
+### 🔮 **Rune Sayfaları**
+
+1. **Rune'lara Erişin** → Champion detayı → "Runes" butonu
+2. **Primary Tree** → Ana rune seçimi
+3. **Secondary Tree** → Destekleyici rune'lar
+4. **Stat Shards** → Bonus istatistikler
+5. **Kurulumu Kopyalayın** → Oyun içinde kullanın
+
+### 📚 **Strateji Rehberleri**
+
+1. **Champion Guide** → Detaylı oynanış bilgileri
+2. **Laning Phase** → Erken oyun stratejileri
+3. **Team Fighting** → Orta-geç oyun pozisyonlaması
+4. **Combos** → Yetenek rotasyon rehberleri
+5. **Counters** → Zor eşleşmeler ve çözümler
+
+---
+
+## ⭐ Favoriler Sistemi
+
+### 💫 **Favoriler Nasıl Kullanılır**
+
+1. **Champion Ekleme:**
+   - Herhangi bir champion kartında kalp ikonuna dokunun
+   - Veya champion detaylarında "Favorilere Ekle"yi kullanın
+
+2. **Favorileri Yönetme:**
+   - Header'daki favoriler butonuna erişim
+   - Tüm kayıtlı championları tek yerde görüntüleyin
+   - Build/Runes/Guide'a hızlı erişim
+
+3. **Favorileri Kaldırma:**
+   - Kalp ikonuna dokunarak kaldırın
+   - Veya "Tümünü Temizle" seçeneğini kullanın
+
+### 🎯 **Favoriler Özellikleri**
+
+- **Gerçek Zamanlı Badge** - Favori sayısını gösterir
+- **Hızlı Erişim** - Rehberlere hızlı navigasyon
+- **Kalıcı Depolama** - Oturumlar arası favori kaydetme
+- **Görsel Göstergeler** - Favori championlarda altın kalp
+
+---
+
+## 🔧 Teknik Detaylar
+
+### 🏗️ **Mimari**
 
 ```
 lib/
-├── main.dart                 # App entry point
-├── champions.dart            # Champion list & management
-├── champion_detail_pages.dart # Build/Runes/Guide pages
-├── favorites_manager.dart    # Favorites system
-├── favorites_page.dart       # Favorites UI
-├── api_service.dart          # Riot API integration
-└── riot_champion.dart        # Data models
+├── main.dart                 # Uygulama giriş noktası
+├── champions.dart            # Champion listesi ve yönetimi
+├── champion_detail_pages.dart # Build/Runes/Guide sayfaları
+├── favorites_manager.dart    # Favoriler sistemi
+├── favorites_page.dart       # Favoriler UI
+├── api_service.dart          # Riot API entegrasyonu
+└── riot_champion.dart        # Veri modelleri
 ```
 
-### 📊 **Technologies Used**
+### 📊 **Kullanılan Teknolojiler**
 
-- **Flutter Framework** - Cross-platform mobile development
-- **Dart Language** - Application logic
-- **Riot Games API** - Real-time champion data
-- **HTTP Package** - API communication
-- **Cached Network Image** - Optimized image loading
-- **Material Design** - Modern UI components
+- **Flutter Framework** - Cross-platform mobil geliştirme
+- **Dart Dili** - Uygulama mantığı
+- **Riot Games API** - Gerçek zamanlı champion verileri
+- **HTTP Package** - API iletişimi
+- **Cached Network Image** - Optimize edilmiş resim yüklemesi
+- **Material Design** - Modern UI bileşenleri
 
-### 🎨 **Design System**
+### 🎨 **Tasarım Sistemi**
 
-- **Dark/Light Theme** - Adaptive theming
-- **League of Legends Colors** - Authentic color palette
-- **Smooth Animations** - 60fps interactions
-- **Responsive Layout** - Works on all screen sizes
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-### 🔧 **Development Setup**
-
-1. **Fork the repository**
-2. **Create feature branch:** `git checkout -b feature/amazing-feature`
-3. **Commit changes:** `git commit -m 'Add amazing feature'`
-4. **Push to branch:** `git push origin feature/amazing-feature`
-5. **Open Pull Request**
-
-### 📝 **Contribution Guidelines**
-
-- Follow Dart/Flutter coding standards
-- Add tests for new features
-- Update documentation as needed
-- Ensure all tests pass before submitting
-
-### 🐛 **Bug Reports**
-
-Found a bug? Please open an issue with:
-- Device information
-- Steps to reproduce
-- Expected vs actual behavior
-- Screenshots if applicable
+- **Dark/Light Tema** - Uyarlanabilir temalama
+- **League of Legends Renkleri** - Otantik renk paleti
+- **Smooth Animasyonlar** - 60fps etkileşimler
+- **Responsive Layout** - Tüm ekran boyutlarında çalışır
 
 ---
 
-## 📄 License
+## 🤝 Katkıda Bulunma
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Katkılarınızı memnuniyetle karşılıyoruz! İşte nasıl yardımcı olabilirsiniz:
+
+### 🔧 **Geliştirme Kurulumu**
+
+1. **Repository'yi fork edin**
+2. **Feature branch oluşturun:** `git checkout -b feature/amazing-feature`
+3. **Değişiklikleri commit edin:** `git commit -m 'Add amazing feature'`
+4. **Branch'e push edin:** `git push origin feature/amazing-feature`
+5. **Pull Request açın**
+
+### 📝 **Katkı Kuralları**
+
+- Dart/Flutter kodlama standartlarını takip edin
+- Yeni özellikler için test ekleyin
+- Dokumentasyonu gerektiği gibi güncelleyin
+- Göndermeden önce tüm testlerin geçtiğinden emin olun
+
+### 🐛 **Hata Raporları**
+
+Hata buldunuz mu? Lütfen şunlarla birlikte bir issue açın:
+- Cihaz bilgileri
+- Tekrarlama adımları
+- Beklenen vs gerçek davranış
+- Uygulanabilirse ekran görüntüleri
 
 ---
 
-## 🙏 Acknowledgments
+## 📄 Lisans
 
-- **Riot Games** - For the comprehensive API
-- **Flutter Team** - For the amazing framework
-- **League of Legends Community** - For inspiration and feedback
-- **Contributors** - Thank you for your valuable contributions!
+Bu proje MIT Lisansı altında lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.
+
+---
+
+## 🙏 Teşekkürler
+
+- **Riot Games** - Kapsamlı API için
+- **Flutter Takımı** - Harika framework için
+- **League of Legends Topluluğu** - İlham ve geri bildirim için
+- **Katkıda Bulunanlar** - Değerli katkılarınız için teşekkürler!
 
 ---
 
 <div align="center">
 
-**Made with ❤️ for the League of Legends community**
+**League of Legends topluluğu için ❤️ ile yapıldı**
 
-[⬆ Back to Top](#-league-of-legends-ai-coach-application)
+[⬆ Başa Dön](#-league-of-legends-ai-coach-uygulaması)
 
 </div>
